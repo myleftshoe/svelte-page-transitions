@@ -10,8 +10,8 @@
 </script>
 <page
     bind:this={ref}
-    in:fly={{ x: 375, delay: 0, duration: 40000, opacity: 1 }} 
-    out:fly={{ x: -375, delay: 0, duration: 40000, opacity: 1 }} 
+    in:fly={{ x: 375, delay: 0, duration: 400, opacity: 1 }} 
+    out:fly={{ x: -375, delay: 0, duration: 400, opacity: 1 }} 
     on:outrostart={handleOutrostart}
 >
     <slot/>
