@@ -1,14 +1,9 @@
 <script>
     import { cover, coverV, fadeOut, parallax, push } from '$lib/page-transitions'
-    
-    // function handleOutrostart() {
-    //     // ensure that outgoing page is behind incoming
-    //     ref.style.zIndex = -1
-    // }
-    let ref
-
     const { inTransition, inOptions, outTransition, outOptions, handleOutrostart} = parallax
+    let ref
 </script>
+
 <page
     bind:this={ref}
     in:inTransition={inOptions} 
