@@ -7,7 +7,7 @@
     // }
     let ref
 
-    const { inTransition, inOptions, outTransition, outOptions, handleOutrostart} = fadeOut
+    const { inTransition, inOptions, outTransition, outOptions, handleOutrostart} = parallax
 </script>
 <page
     bind:this={ref}
