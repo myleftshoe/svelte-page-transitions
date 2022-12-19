@@ -1,18 +1,19 @@
 <script>
-    import { fly } from 'svelte/transition';
-
-    function handleOutrostart() {
-        // ensure that outgoing page is behind incoming
-        ref.style.zIndex = -1
-    }
+    import { cover, coverV, fadeOut, parallax, push } from '$lib/page-transitions'
+    
+    // function handleOutrostart() {
+    //     // ensure that outgoing page is behind incoming
+    //     ref.style.zIndex = -1
+    // }
     let ref
 
+    const { inTransition, inOptions, outTransition, outOptions, handleOutrostart} = fadeOut
 </script>
 <page
     bind:this={ref}
-    in:fly={{ x: 375, delay: 0, duration: 400, opacity: 1 }} 
-    out:fly={{ x: -375, delay: 0, duration: 400, opacity: 1 }} 
-    on:outrostart={handleOutrostart}
+    in:inTransition={inOptions} 
+    out:outTransition={outOptions} 
+    on:outrostart={handleOutrostart(ref)}
 >
     <slot/>
 </page>
