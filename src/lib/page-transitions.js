@@ -17,6 +17,15 @@ export const cover = {
     outOptions: { start: .5, delay: 0, duration: 400, opacity: .5 },
 }
 
+export const coverBack = {
+    ...defaults,
+    inTransition: fly,
+    inOptions: { x: -375, delay: 0, duration: 400, opacity: 1 },
+    outTransition: scale,
+    outOptions: { start: .5, delay: 0, duration: 400, opacity: .5 },
+}
+
+
 export const coverV = {
     ...defaults,
     inTransition: fly,
@@ -36,17 +45,26 @@ export const fadeOut = {
 export const parallax = {
     ...defaults,
     inTransition: fly,
-    inOptions: { x: 375, delay: 0, duration: 400, opacity: 1 },
+    inOptions: { x: 375, delay: 0, duration: 600, opacity: 1 },
     outTransition: fly,
-    outOptions: { x: -125, delay: 0, duration: 800, opacity: 1 },
+    outOptions: { x: -175, delay: 0, duration: 600, opacity: 0.35 },
     handleOutrostart: (ref) => (e) => {
         ref.style.zIndex = -1        
     }
 }
 
 export const push = {
+    ...defaults,
     inTransition: fly,
-    inOptions: { x: 375, delay: 0, duration: 400, opacity: 1 },
+    inOptions: { x: 375, delay: 0, duration: 600, opacity: 1 },
     outTransition: fly,
-    outOptions: { x: -375, delay: 0, duration: 400, opacity: 1 },
+    outOptions: { x: -375, delay: 0, duration: 600, opacity: .35 },
+}
+
+export const pushBack = {
+    ...defaults,
+    inTransition: fly,
+    inOptions: { x: -375, delay: 0, duration: 600, opacity: .35 },
+    outTransition: fly,
+    outOptions: { x: 375, delay: 0, duration: 600, opacity: .1 },
 }

@@ -12,7 +12,6 @@
     :global(body) {
         box-sizing: border-box;
         margin: 0;
-        color:white;
     }
     #app {
         display: grid;

@@ -1,6 +1,6 @@
 <script>
-    import { cover, coverV, fadeOut, parallax, push } from '$lib/page-transitions'
-    const { inTransition, inOptions, outTransition, outOptions, handleOutrostart} = parallax
+    import { cover, coverBack, coverV, fadeOut, parallax, push, pushBack } from '$lib/page-transitions'
+    const { inTransition, inOptions, outTransition, outOptions, handleOutrostart} = coverV
     let ref
 </script>
 
@@ -16,6 +16,6 @@
 <style>
     page { 
         display:grid;
-        background-color: #0007;
+        background-color: #eee;
     }
 </style>
