@@ -1,6 +1,6 @@
 <script>
-    import { cover, coverBack, coverV, fadeOut, parallax, push, pushBack } from '$lib/page-transitions'
-    const { inTransition, inOptions, outTransition, outOptions, handleOutrostart} = coverV
+    import { cover, coverBack, coverV, fadeOut, parallax, parallaxBack, push, pushBack } from '$lib/page-transitions'
+    const { inTransition, inOptions, outTransition, outOptions, handleOutrostart} = parallaxBack
     let ref
 </script>
 
