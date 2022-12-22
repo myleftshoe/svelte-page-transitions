@@ -1,7 +1,6 @@
 <script>
     import Page from '$lib/components/page.svelte'
     const items = Array(10).fill('Item').map((item, index) => `${item} ${index}`)
-    console.log(items)
 </script>
 
 <Page>
