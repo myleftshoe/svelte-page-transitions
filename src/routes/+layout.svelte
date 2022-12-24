@@ -1,4 +1,13 @@
 <script>
+    import { beforeNavigate } from '$app/navigation'
+    import { pageRef, out, outt } from '$lib/store'
+    import { cover, coverBack, coverV, fadeOut, parallax, parallaxBack, push, pushBack } from '$lib/page-transitions'
+    const { outTransition, outOptions, handleOutrostart} = cover
+    beforeNavigate(() => {
+        console.log($pageRef)
+        $outt = outTransition
+        $out = { ...outOptions }
+    })
     function goBack() {
         history.back()
     }
@@ -9,7 +18,7 @@
         <a href="#" on:click={goBack}>Back</a> | <a href="/page1">Page 1</a> | <a href="/page2">Page 2</a>
     </nav>
     <main>
-        <slot />
+        <slot/>
     </main>
     <footer>Footer</footer>
 </div>

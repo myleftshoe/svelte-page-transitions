@@ -1,14 +1,16 @@
 <script>
     import { cover, coverBack, coverV, fadeOut, parallax, parallaxBack, push, pushBack } from '$lib/page-transitions'
-    const { inTransition, inOptions, outTransition, outOptions, handleOutrostart} = coverBack
-    let ref
+    const { inTransition, inOptions, outTransition, outOptions, handleOutrostart} = push
+    import { pageRef, out, outt } from '$lib/store'
+    $outt = outTransition
+    $out = outOptions
 </script>
 
 <page
-    bind:this={ref}
+    bind:this={$pageRef}
     in:inTransition={inOptions} 
-    out:outTransition={outOptions} 
-    on:outrostart={handleOutrostart(ref)}
+    out:$outt={$out} 
+    on:outrostart={handleOutrostart($pageRef)}
 >
     <slot/>
 </page>
