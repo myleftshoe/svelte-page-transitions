@@ -1,6 +1,5 @@
 <script>
     import { fly, scale } from 'svelte/transition'
-    import Page from '$lib/components/page.svelte'
     const items = Array(10).fill('Item').map((item, index) => `${item} ${index}`)
 </script>
 
@@ -40,12 +39,10 @@
         background-color: #0f07;
     }
     item {
-        color: black;
-        display: block; 
         background-color: #f007;
         margin: 1px;
         padding: 8px;
-        width: 90%;
+        width: 100%;
         text-align: center;
     }
     footer {

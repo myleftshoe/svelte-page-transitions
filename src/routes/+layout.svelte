@@ -1,16 +1,4 @@
 <script>
-    import { beforeNavigate } from '$app/navigation'
-    import { pageRef, out, outt } from '$lib/store'
-    import { cover, coverBack, coverV, fadeOut, parallax, parallaxBack, push, pushBack } from '$lib/page-transitions'
-    const { outTransition, outOptions, handleOutrostart} = cover
-    beforeNavigate(() => {
-        console.log($pageRef)
-        $outt = outTransition
-        $out = { ...outOptions }
-    })
-    function goBack() {
-        history.back()
-    }
 </script>
 
 <div id="app">
