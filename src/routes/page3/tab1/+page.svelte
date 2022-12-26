@@ -11,16 +11,16 @@
     <a href="#" slot="end" on:click={() => history.back()}>Back</a>
 </Nav>
 <Main>
-    <h1>TAB 2</h1>
+    <h1>TAB 1</h1>
     {#each items as item}
         <item>{item}</item>
     {/each}
 </Main>
 <Footer noTransition>
     <div id="tabs">
-        <a href="/tab1">Tab1</a>
-        <div>Tab2</div>
-        <a href="/tab3">Tab3</a>
+        <div>Tab1</div>
+        <a href="tab2">Tab2</a>
+        <a href="tab3">Tab3</a>
     </div>
 </Footer>
 

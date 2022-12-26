@@ -7,7 +7,7 @@
 <Nav>
     <a href="/page1">Page 1</a>
     <a href="/page2">Page 2</a>
-    <a href="/tab1">Page 3</a>
+    <a href="/page3/tab1">Page 3</a>
 </Nav>
 <Main>HOME PAGE</Main>
 <Footer>Footer</Footer>
