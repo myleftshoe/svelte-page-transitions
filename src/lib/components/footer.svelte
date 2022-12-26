@@ -3,8 +3,8 @@
 </script>
 
 <footer>
-    <div in:fly={{y:40}} out:fly={{y:40, duration: 4000}}>
-        <slot/>
+    <div in:fly={{ y: 40 }} out:fly={{ y: 40, duration: 4000 }}>
+        <slot />
     </div>
 </footer>
 

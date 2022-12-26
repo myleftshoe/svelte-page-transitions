@@ -2,7 +2,7 @@
 </script>
 
 <div id="app">
-    <slot/>
+    <slot />
 </div>
 
 <style>
