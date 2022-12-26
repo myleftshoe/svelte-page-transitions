@@ -4,7 +4,7 @@
 
 <nav>
     <slot name="start"><div/></slot>
-    <div in:fly={{ x: 375 }} out:fly={{ x: -375, duration: 4000 }}>
+    <div in:fly={{ x: 375 }} out:fly={{ y: -80 }}>
         <slot />
     </div>
     <slot name="end"><div/></slot>

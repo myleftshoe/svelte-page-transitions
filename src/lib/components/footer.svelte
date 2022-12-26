@@ -3,7 +3,7 @@
 </script>
 
 <footer>
-    <div in:fly={{ y: 40 }} out:fly={{ y: 40, duration: 4000 }}>
+    <div in:fly={{ x: 375 }} out:fly={{ y: 80 }}>
         <slot />
     </div>
 </footer>
