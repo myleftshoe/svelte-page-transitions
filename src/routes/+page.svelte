@@ -9,5 +9,5 @@
     <a href="/page2">Page 2</a>
     <a href="/page3/tab1">Page 3</a>
 </Nav>
-<Main>HOME PAGE</Main>
+<Main><h1>HOME PAGE</h1></Main>
 <Footer>Footer</Footer>
