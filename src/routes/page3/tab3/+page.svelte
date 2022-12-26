@@ -18,7 +18,7 @@
 </Main>
 <Footer noTransition>
     <div id="tabs">
-        <a href="tab1" on:click={() => {console.log('dsfsdf')}}>Tab1</a>
+        <a href="tab1">Tab1</a>
         <a href="tab2">Tab2</a>
         <div>Tab3</div>
     </div>
