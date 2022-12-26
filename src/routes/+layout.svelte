@@ -3,6 +3,7 @@
     import { beforeNavigate } from '$app/navigation'
 
     beforeNavigate(({ to }) => {
+        console.log('beforeNavigate +layout')
         $back = to.url.pathname === '/' ? true : false
     })
 

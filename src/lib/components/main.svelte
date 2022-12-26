@@ -6,12 +6,12 @@
     let inOptions = { x: 375, opacity: 1 }
     let outOptions = { x: -375, opacity: 1 }
 
-    beforeUpdate((args) => {
-        console.log('beforeUpdate', args)
+    beforeUpdate(() => {
+        console.log('beforeUpdate', $back)
         inOptions = $back ? { x: -375, opacity: 1 } :  { x: 375, opacity: 1 }
     })
-    afterUpdate((args) => {
-        console.log('afterUpdate', args)
+    afterUpdate(() => {
+        console.log('afterUpdate', $back)
         outOptions = $back ? { x: 375, opacity: 1 } :  { x: -375, opacity: 1 }
     })
 </script>
