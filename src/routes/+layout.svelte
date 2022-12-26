@@ -1,5 +1,17 @@
 <script>
+    import { back } from '$lib/stores/navigation'
+    import { afterNavigate } from '$app/navigation'
+    
+    afterNavigate(() => {
+        $back = false
+    })
+    function popState(e) {
+        console.log(e)
+        $back = true
+    }
 </script>
+
+<svelte:window on:popstate={popState}/>
 
 <div id="app">
     <slot />
