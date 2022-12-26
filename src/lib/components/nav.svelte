@@ -3,16 +3,20 @@
 </script>
 
 <nav>
+    <slot name="start"><div/></slot>
     <div in:fly={{ x: 375 }} out:fly={{ x: -375, duration: 4000 }}>
         <slot />
     </div>
+    <slot name="end"><div/></slot>
 </nav>
 
 <style>
     nav {
         grid-area: nav;
-        display: grid;
-        place-content: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
         background-color: cyan;
     }
 </style>

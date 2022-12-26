@@ -6,7 +6,9 @@
 </script>
 
 <Nav>
-    <a href="#" on:click={() => history.back()}>Back</a> | <a href="/">Home</a> | <a href="/page1">Page 1</a>
+    <a href="/" slot="start">Home</a>
+    <a href="/page1">Page 1</a>
+    <a href="#" slot="end" on:click={() => history.back()}>Back</a>
 </Nav>
 <Main>
     <h1>PAGE 2</h1>
