@@ -1,5 +1,5 @@
 {
-	"name": "html2canvas",
+	"name": "svelte-page-transitions",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
