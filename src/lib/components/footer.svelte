@@ -9,7 +9,7 @@
             <slot />
         </div>
     {:else}
-        <div in:fly={{ x: 375 }} out:fly={{ y: 80 }}>
+        <div in:fly={{ x: 375 }} out:fly={{ y: 20 }}>
             <slot />
         </div>
     {/if}
