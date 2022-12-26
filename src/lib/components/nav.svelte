@@ -1,12 +1,19 @@
 <script>
     import { fly } from 'svelte/transition'
+    export let noTransition = false
 </script>
 
 <nav>
     <slot name="start"><div/></slot>
-    <div in:fly={{ x: 375 }} out:fly={{ y: -80 }}>
-        <slot />
-    </div>
+    {#if noTransition} 
+        <div>
+            <slot />
+        </div>
+    {:else}
+        <div in:fly={{ x: 375 }} out:fly={{ y: -80 }}>
+            <slot />
+        </div>
+    {/if}
     <slot name="end"><div/></slot>
 </nav>
 
