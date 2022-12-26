@@ -3,29 +3,20 @@
     import { fly, scale } from 'svelte/transition'
     import { afterUpdate, beforeUpdate } from 'svelte'
 
-    let ref
     let inOptions = { x: 375, opacity: 1 }
     let outOptions = { x: -375, opacity: 1 }
 
     beforeUpdate((args) => {
-        console.log('beforeUpdate', ref, args)
-        if ($back) {
-            inOptions = { x: -375, opacity: 1 }
-        } else {
-            inOptions = { x: 375, opacity: 1 }
-        }
+        console.log('beforeUpdate', args)
+        inOptions = $back ? { x: -375, opacity: 1 } :  { x: 375, opacity: 1 }
     })
     afterUpdate((args) => {
-        console.log('afterUpdate', ref, args)
-        if ($back) {
-            outOptions = { x: 375, opacity: 1 }
-        } else {
-            outOptions = { x: -375, opacity: 1 }
-        }
+        console.log('afterUpdate', args)
+        outOptions = $back ? { x: 375, opacity: 1 } :  { x: -375, opacity: 1 }
     })
 </script>
 
-<main bind:this={ref} in:fly={inOptions} out:fly={outOptions}>
+<main in:fly={inOptions} out:fly={outOptions}>
     <slot />
 </main>
 

@@ -1,10 +1,11 @@
 <script>
     import { back } from '$lib/stores/navigation'
-    import { afterNavigate } from '$app/navigation'
-    
-    afterNavigate(() => {
-        $back = false
+    import { beforeNavigate } from '$app/navigation'
+
+    beforeNavigate(({ to }) => {
+        $back = to.url.pathname === '/' ? true : false
     })
+
     function popState(e) {
         console.log(e)
         $back = true
