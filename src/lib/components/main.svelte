@@ -2,7 +2,7 @@
     import { fly, scale } from 'svelte/transition'
 </script>
 
-<main in:fly={{ x: 375 }} out:scale>
+<main in:fly={{ x: 375 }} out:fly={{ x: -375 }} >
     <slot />
 </main>
 
