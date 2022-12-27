@@ -49,7 +49,18 @@
         return { inFunc, inOptions, outFunc, outOptions }
     }
 
-    const preset = fade
+    const ios = parallax
+
+    function android(back) {
+        const duration = 250
+        const inFunc = fly
+        const inOptions = back ? { } : { y: 56, duration } 
+        const outFunc = fly
+        const outOptions = back ? { y: 56, duration } : { delay: duration, duration: 0 }
+        return { inFunc, inOptions, outFunc, outOptions }
+    }
+
+    const preset = android
 
     let ref
     let inFunc, inOptions
