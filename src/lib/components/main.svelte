@@ -1,7 +1,7 @@
 <script>
     import { afterUpdate, beforeUpdate } from 'svelte'
     import { back } from '$lib/stores/navigation'
-    import { android as preset } from '$lib/transition/preset'
+    import { ios as preset } from '$lib/transition/preset'
 
     let ref
     let inFunc, inOptions
