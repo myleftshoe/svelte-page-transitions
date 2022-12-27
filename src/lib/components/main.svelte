@@ -43,6 +43,7 @@
         flex-direction: column;
         align-items: center;
         background-color: #efeff4;
-        border-left: 1px solid rgba(0, 0, 0, .1);
+        /* background-color: #000; */
+        border-left: 1px solid #7777;
     }
 </style>

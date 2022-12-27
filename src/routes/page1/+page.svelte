@@ -28,7 +28,7 @@
     }
     item {
         background-color: #fff;
-        border-bottom: 1px solid #c7c7c7;
+        border-bottom: 1px solid #7777;
         padding: 8px;
         width: 100%;
         text-align: center;

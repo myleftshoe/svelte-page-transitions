@@ -25,7 +25,8 @@
         align-items: center;
         padding: 1em;
         background-color: #f7f7f8;
-        border-bottom: 1px solid #b9b9ba;
+        /* background-color: #121212; */
+        border-bottom: 1px solid #7777;
         z-index: 10;
     }
 </style>
