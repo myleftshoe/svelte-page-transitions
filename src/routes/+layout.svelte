@@ -1,15 +1,25 @@
 <script>
     import { back } from '$lib/stores/navigation'
-    import { beforeNavigate } from '$app/navigation'
+    import { beforeNavigate, afterNavigate } from '$app/navigation'
 
+    let updateBack = true
     beforeNavigate(({ to }) => {
-        console.log('beforeNavigate +layout')
-        $back = to.url.pathname === '/' ? true : false
+        if (!updateBack) return
+        updateBack = false
+        $back = (to.url.pathname === '/') 
+        console.log('beforeNavigate +layout', $back)
+    })
+    afterNavigate(() => {
+        console.log('afterNavigate')
+        updateBack = true
     })
 
     function popState(e) {
         console.log(e)
+        if (!updateBack) return
+        updateBack = false
         $back = true
+        console.log('popState +layout', $back)
     }
 </script>
 
