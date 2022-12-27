@@ -15,7 +15,7 @@
     })
 
     function popState(e) {
-        console.log(e)
+        // console.log(e)
         if (!updateBack) return
         updateBack = false
         $back = true
