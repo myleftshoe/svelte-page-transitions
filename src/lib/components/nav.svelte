@@ -25,5 +25,6 @@
         align-items: center;
         padding: 1em;
         background-color: cyan;
+        z-index: 10;
     }
 </style>

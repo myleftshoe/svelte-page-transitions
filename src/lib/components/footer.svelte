@@ -21,5 +21,6 @@
         display: grid;
         place-content: center;
         background-color: pink;
+        z-index: 10;
     }
 </style>
