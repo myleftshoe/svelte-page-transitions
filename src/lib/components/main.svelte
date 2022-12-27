@@ -1,7 +1,7 @@
 <script>
     import { afterUpdate, beforeUpdate } from 'svelte'
     import { back } from '$lib/stores/navigation'
-    import { ios as preset } from '$lib/transition/preset'
+    import { coverV as preset } from '$lib/transition/preset'
 
     let ref
     let inFunc, inOptions
@@ -42,6 +42,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #fff;
+        background-color: #efeff4;
     }
 </style>

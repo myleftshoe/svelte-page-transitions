@@ -33,6 +33,7 @@
     :global(body) {
         box-sizing: border-box;
         margin: 0;
+        background-color: #000;
     }
     #app {
         display: grid;

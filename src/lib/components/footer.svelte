@@ -20,7 +20,8 @@
         grid-area: footer;
         display: grid;
         place-content: center;
-        background-color: pink;
+        background-color: #f7f7f8;
+        border-top: 1px solid #b9b9ba;
         z-index: 10;
     }
 </style>

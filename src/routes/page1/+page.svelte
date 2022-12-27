@@ -12,18 +12,28 @@
 </Nav>
 <Main>
     <h1>PAGE 1</h1>
-    {#each items as item}
-        <item>{item}</item>
-    {/each}
+    <section>
+        {#each items as item}
+            <item>{item}</item>
+        {/each}
+    </section>
 </Main>
 <Footer>Footer</Footer>
 
 <style>
+    section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
     item {
-        background-color: #f007;
-        margin: 1px;
+        background-color: #fff;
+        border-bottom: 1px solid #c7c7c7;
         padding: 8px;
         width: 100%;
         text-align: center;
+    }
+    item:first-child {
+        border-top: 1px solid #c7c7c7;
     }
 </style>
