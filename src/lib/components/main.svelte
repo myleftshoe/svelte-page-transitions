@@ -1,7 +1,7 @@
 <script>
     import { afterUpdate, beforeUpdate } from 'svelte'
     import { back } from '$lib/stores/navigation'
-    import { coverV as preset } from '$lib/transition/preset'
+    import { parallax as preset } from '$lib/transition/preset'
 
     let ref
     let inFunc, inOptions
@@ -43,5 +43,6 @@
         flex-direction: column;
         align-items: center;
         background-color: #efeff4;
+        border-left: 1px solid rgba(0, 0, 0, .1);
     }
 </style>
