@@ -1,6 +1,7 @@
 <script>
     import { back } from '$lib/stores/navigation'
-    import { fly, scale } from 'svelte/transition'
+    import { scale } from 'svelte/transition'
+    import { fly } from '$lib/transition'
     import { afterUpdate, beforeUpdate } from 'svelte'
 
     let ref
@@ -9,14 +10,12 @@
 
     beforeUpdate(() => {
         console.log('beforeUpdate', $back)
-        const vw = window.innerWidth
-        inOptions = $back ? { x: -vw, opacity: 1 } :  { x: vw, opacity: 1 }
+        inOptions = $back ? { x: '-100%', opacity: 1 } :  { x: '100%', opacity: 1 }
         if (ref) ref.style.zIndex = -1
     })
     afterUpdate(() => {
         console.log('afterUpdate', $back)
-        const vw = window.innerWidth
-        outOptions = $back ? { x: vw, opacity: 1 } :  { x: -vw, opacity: 1 }
+        outOptions = $back ? { x: '100%', opacity: 1 } :  { x: '-100%', opacity: 1 }
     })
 </script>
 
