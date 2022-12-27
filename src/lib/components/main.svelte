@@ -3,6 +3,7 @@
     import { fly, scale } from 'svelte/transition'
     import { afterUpdate, beforeUpdate } from 'svelte'
 
+    let ref
     let inOptions 
     let outOptions
 
@@ -10,6 +11,7 @@
         console.log('beforeUpdate', $back)
         const vw = window.innerWidth
         inOptions = $back ? { x: -vw, opacity: 1 } :  { x: vw, opacity: 1 }
+        if (ref) ref.style.zIndex = -1
     })
     afterUpdate(() => {
         console.log('afterUpdate', $back)
@@ -18,7 +20,7 @@
     })
 </script>
 
-<main in:fly={inOptions} out:fly={outOptions}>
+<main bind:this={ref} in:fly={inOptions} out:fly={outOptions}>
     <slot />
 </main>
 
