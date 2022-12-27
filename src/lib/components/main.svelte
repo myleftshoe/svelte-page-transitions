@@ -3,16 +3,18 @@
     import { fly, scale } from 'svelte/transition'
     import { afterUpdate, beforeUpdate } from 'svelte'
 
-    let inOptions = { x: 375, opacity: 1 }
-    let outOptions = { x: -375, opacity: 1 }
+    let inOptions 
+    let outOptions
 
     beforeUpdate(() => {
         console.log('beforeUpdate', $back)
-        inOptions = $back ? { x: -375, opacity: 1 } :  { x: 375, opacity: 1 }
+        const vw = window.innerWidth
+        inOptions = $back ? { x: -vw, opacity: 1 } :  { x: vw, opacity: 1 }
     })
     afterUpdate(() => {
         console.log('afterUpdate', $back)
-        outOptions = $back ? { x: 375, opacity: 1 } :  { x: -375, opacity: 1 }
+        const vw = window.innerWidth
+        outOptions = $back ? { x: vw, opacity: 1 } :  { x: -vw, opacity: 1 }
     })
 </script>
 

@@ -10,7 +10,7 @@
             <slot />
         </div>
     {:else}
-        <div in:fly={{ x: 375 }} out:fly={{ y: 40 }}>
+        <div in:fly={{ x: window.innerWidth }} out:fly={{ y: 40 }}>
             <slot />
         </div>
     {/if}
