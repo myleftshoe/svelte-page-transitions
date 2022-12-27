@@ -5,21 +5,27 @@
     import { afterUpdate, beforeUpdate } from 'svelte'
 
     let ref
-    let inOptions 
-    let outOptions
+    let inFunc, inOptions 
+    let outFunc, outOptions
 
     beforeUpdate(() => {
         console.log('beforeUpdate', $back)
-        inOptions = $back ? { x: '-100%', opacity: 1 } :  { x: '100%', opacity: 1 }
-        if (ref) ref.style.zIndex = -1
+        inFunc =  $back ? scale : fly
+        inOptions = $back ? { start: 0.75, opacity: 1, duration: 450 } : { x: '100%', opacity: 1, duration: 450 }
     })
     afterUpdate(() => {
         console.log('afterUpdate', $back)
-        outOptions = $back ? { x: '100%', opacity: 1 } :  { x: '-100%', opacity: 1 }
+        outFunc =  $back ? fly : scale
+        outOptions = $back ? { x: '100%', opacity: 1, duration: 450 } : { start: 0.75, opacity: 1, duration: 450 }
     })
+
+    function handleOutrostart() {
+        console.log('handleOutrostart')
+        ref.style.zIndex = $back ? 1 : -1
+    }
 </script>
 
-<main bind:this={ref} in:fly={inOptions} out:fly={outOptions}>
+<main bind:this={ref} in:inFunc={inOptions} out:outFunc={outOptions} on:introstart={handleIntrostart} on:outrostart={handleOutrostart}>
     <slot />
 </main>
 
@@ -29,6 +35,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #0f07;
+        background-color: #fff;
     }
 </style>
