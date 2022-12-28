@@ -1,6 +1,15 @@
 import { fade as _fade, scale } from 'svelte/transition'
 import { fly } from '$lib/transition'
 
+export function none() {
+    return {
+        inFunc: () => { },
+        inOptions: { },
+        outFunc: () => { },
+        outOptions: { },
+    }
+}
+
 export function fade(back = false, duration = 500) {
     return {
         inFunc: _fade,
