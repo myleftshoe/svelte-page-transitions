@@ -3,10 +3,14 @@
     import { beforeNavigate, afterNavigate } from '$app/navigation'
 
     let updateBack = true
-    beforeNavigate(({ to }) => {
+    function setBack(condition = false) {
         if (!updateBack) return
         updateBack = false
-        $back = (to.url.pathname === '/') 
+        $back = condition
+    }
+
+    beforeNavigate(({ to }) => {
+        setBack(to.url.pathname === '/') 
         console.log('beforeNavigate +layout', $back)
     })
     afterNavigate(() => {
@@ -16,9 +20,7 @@
 
     function popState(e) {
         // console.log(e)
-        if (!updateBack) return
-        updateBack = false
-        $back = true
+        setBack(true)
         console.log('popState +layout', $back)
     }
 </script>
